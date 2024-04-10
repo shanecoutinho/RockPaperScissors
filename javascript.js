@@ -20,7 +20,7 @@ function playRound(playerSelection,computerSelection) {
         if (computerSelection == 'paper') {
             console.log('Computer Won,Paper beats Rock');
             console.log(computerSelection);
-            computerSelection += 1 ;  
+            computerScore += 1 ;  
         } else {
             console.log('Player Won,Rock beats Scissors');
             console.log(computerSelection);  
@@ -31,7 +31,7 @@ function playRound(playerSelection,computerSelection) {
         if (computerSelection == 'rock') {
             console.log('Computer Won,Rock beats Scissors');
             console.log(computerSelection);  
-            computerSelection += 1 ; 
+            computerScore += 1 ; 
         } else {
             console.log('Player Won,Scissors beats Paper');
             console.log(computerSelection);  
@@ -42,7 +42,7 @@ function playRound(playerSelection,computerSelection) {
         if (computerSelection == 'scissors') {
             console.log('Computer Won,Scissors beats Paper');
             console.log(computerSelection);  
-            computerSelection += 1 ; 
+            computerScore += 1 ; 
 
         } else {
             console.log('Player Won,Paper beats Rock');
@@ -58,15 +58,16 @@ function playgame(){
         let computerSelection = getComputerChoice();
         playRound(playerSelection,computerSelection);
     }
+       
+    if(playerScore<computerScore){
+       console.log("Computer won the game by "+ computerScore + " to " + playerScore);
+    }else if(playerScore>computerScore ){
+       console.log("Player won the game by "+ playerScore + " to " + computerScore);
+    }else{
+        console.log("Its a draw");
+    }
+}
 
-}
-if (playerScore == computerScore) {
-    console.log("Its a draw")
-}else if(playerScore<computerScore){
-   console.log("Computer won the game by "+ computerScore + "to " + playerScore);
-}else{
-   console.log("Player won the game by "+ playerScore + "to " + computerScore)
-}
 console.log(playgame())
 
 
