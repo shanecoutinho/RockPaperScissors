@@ -1,1 +1,2 @@
 # RockPaperScissors
+User inputs 5 Rock Paper Scissors plays against Computer which generates a random option between the three.The program then prints the winner between the two after the rounds are played
